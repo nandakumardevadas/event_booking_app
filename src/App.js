@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { Provider } from 'react-redux';
 import AppRouter from './Router';
 import { store } from './store';
-
-// const store = createStore(reducers);
 import Header from './components/sections/Header';
 import Footer from './components/sections/Footer';
 
