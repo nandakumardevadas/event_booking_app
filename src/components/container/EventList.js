@@ -18,9 +18,7 @@ const EventList = () => {
                     { !eventList || eventList.length === 0 ? <span className="list__notfound">No Records found</span> :
                         eventList.map((event, key) => {
                             return (
-                                <>
-                                    <EventGridView event={event} />
-                                </>
+                                    <EventGridView  key={key} event={event} />
                             );
                         })
                     }

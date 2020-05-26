@@ -1,5 +1,4 @@
 .content {
-    // grid-area: main;
     min-height: 800px;
     .notfound {
         display: flex;
@@ -93,18 +92,9 @@
         }
     }
 }
-// .footer {
-//     grid-area: footer;
-// }
 
 .container {
     display: flex;
-    // grid-template-columns: auto;
-    // grid-template-rows: auto;
-    // grid-template-areas:
-    //     "header"
-    //     "main"
-    //     "footer";
     flex-direction: column;
     justify-content: center;
 }
@@ -121,10 +111,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 24px;
+        font-size: 18px;
         padding: 20px;    
         max-width: 100%;
         overflow: scroll;
+        margin-top: 30px;
     }
     &__summary {
         display: flex;
