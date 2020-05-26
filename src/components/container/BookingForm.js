@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import _ from "lodash";
 import Input from '../core/Input';
 import Dropdown from '../core/Dropdown';
 import ValidateHelper from '../../utils/validateHelpers';
@@ -10,12 +11,8 @@ const BookingForm = ({ eventDetail, onBooking }) => {
     const [errors, setError] = useState({});
     const [isValid, setValid] = useState(false);
     const [inputs, setInputs] = useState([]);
-    const options = {
-        "1": 1,
-        "2": 2,
-        "3" : 3,
-        "4" : 4
-    }
+    const optionsRange = _.range(1, 7);
+    const options = _.zipObject(optionsRange, optionsRange);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -38,7 +35,7 @@ const BookingForm = ({ eventDetail, onBooking }) => {
                     test: (value) => {
                         return RequiredValidation(value);
                     },
-                    message: 'Please enter your name of Attendee',
+                    message: 'Please enter the name of Attendee',
                 },
             ],
             errors: [],
