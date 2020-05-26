@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import { Provider } from 'react-redux';
+import AppRouter from './Router';
+import { store } from './store';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// const store = createStore(reducers);
+import Header from './components/sections/Header';
+import Footer from './components/sections/Footer';
+
+import './scss/main.scss';
+
+const Container = styled.div``;
+
+class App extends React.PureComponent {
+  render() {
+    return (
+      <Provider store={store}>
+        <Container className="container">
+          <Header />
+          <div className="content">
+            <AppRouter />
+          </div>
+          <Footer className="footer" />
+        </Container>
+      </Provider>
+    );
+  }
 }
 
 export default App;

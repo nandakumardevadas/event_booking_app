@@ -1,0 +1,11 @@
+.footer {
+    justify-content: space-between;
+    padding: 2em 5em;
+    background-color: $dimBlack;
+    display: flex;
+    color: $greyShade2;
+    img {
+      padding: 0 0.3em;
+      height: 15px;
+    }
+  }

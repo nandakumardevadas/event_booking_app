@@ -1,0 +1,15 @@
+// File : main.scss (Default Theme)
+// All "Base" specific SASS 
+
+@import 'base/variables';
+@import 'base/base';
+
+// All "Layout" specific SASS
+
+@import 'layout/header';
+@import 'layout/body';
+@import 'layout/footer';
+
+// All "Responsive" specific SASS
+
+@import "./responsive/responsive";
